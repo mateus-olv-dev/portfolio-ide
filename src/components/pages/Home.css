@@ -1,0 +1,58 @@
+.home {
+  padding: 40px;
+}
+
+.sobre-mim span {
+  color: var(--text);
+  font-family: var(--mono);
+  font-weight: 400;
+  opacity: 0.5;
+  font-size: 14px;
+
+}
+.sobre-mim h1 {
+  color: var(--text);
+  font-size: 50px;
+  font-family: var(--sans);
+  font-weight: 400;
+}
+.sobre-mim h2 {
+  font-family: var(--sans);
+  font-weight: 400;
+
+  background: linear-gradient(45deg,#44bff0,#446cf0, #4944f0,#7873f5,#572CF3,#682AE9, #3b08a8 ,#3b08a8);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradient-animation 3s ease infinite;
+}
+.sobre-mim p {
+  margin-top: 20px;
+  color: var(--text);
+  font-family: var(--mono);
+  font-weight: 200;
+  max-width: 50%;
+  line-height: 25px;
+  font-size: 14px;
+}
+
+.container-tecnologias {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tecnologias {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+}
+.tecnologias li {
+  font-size: 15px;
+  border-radius: 5px;
+  background-color: #4c98e1;
+  padding: 10px;
+  color: var(--text);
+}

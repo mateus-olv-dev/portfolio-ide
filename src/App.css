@@ -1,0 +1,31 @@
+.external-side-bar {
+  height: 90%;
+  width: auto;
+  position: absolute;
+  left: 10px;
+  top: 20px;
+}
+.external-side-bar ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.external-side-bar ul li {
+  padding: 5px 10px;
+}
+
+.external-side-bar ul li:first-child {
+  background-color: rgba(44, 49, 58, 0.535);
+  border-radius: 5px;
+}
+.external-side-bar ul li svg {
+  width: 30px;
+  color: var(--text);
+  opacity: 0.8;
+  transition: 0.3s;
+}
+.external-side-bar ul li:hover svg{
+  opacity: 1;
+  cursor: pointer;
+  transform: scale(1.05);
+}

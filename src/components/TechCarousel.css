@@ -1,0 +1,43 @@
+.embla-title {
+  font-size: 18px;
+  font-weight: 400;
+  opacity: 0.3;
+}
+
+.embla {
+  --slide-spacing: 60px;
+  overflow: hidden;
+  width: 600px;
+  /* margin-left: 100px; */
+  background-color: var(--bg-color);
+  padding: 10px 0;
+  mask-image: radial-gradient(
+    circle,
+    rgba(14, 17, 21, 0.8) 80%,
+    rgba(14, 17, 21, 0) 100%
+  );
+}
+
+.embla__viewport {
+  overflow: hidden;
+}
+
+.embla__container {
+  display: flex;
+  margin-left: calc(var(--slide-spacing) * -1);
+  will-change: transform;
+}
+
+.embla__slide {
+  flex: 0 0 auto;
+  min-width: 0;
+  max-width: 100%;
+  padding-left: 50px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #682AE9;
+
+  text-shadow: 0 0 8px rgba(104, 42, 233, 0.01),
+               0 0 16px rgba(104, 42, 233, 0.01);
+}
+
