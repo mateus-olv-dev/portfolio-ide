@@ -1,152 +1,128 @@
-import './SideBarNew.css';
+import './FileExplorer.css';
+import { NavLink } from "react-router-dom";
 
-export function SideBarNew () {
+
+export function FileExplorer () {
   return (
-      <div className="tree-container">
-        <ul>
-          <li className="tree-item">
-            <input type="checkbox" id="folder-src" className="tree-toggle" defaultChecked />
-            <label htmlFor="folder-src" className="tree-label">
-              <svg className="icon folder-closed-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
-                <path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 2H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z" />
-              </svg>
-              <svg className="icon folder-open-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
-                <path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 2H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z" />
-                <path d="M2 10h20" />
-              </svg>
+     <div className="file-tree">
+      <ul>
+        <li>
+          <details open>
+            <summary>
+              <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width={"13px"}
+                  height={"13px"}
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M2 5.5C2 4.67157 2.67157 4 3.5 4H9.17157C9.5694 4 9.95093 4.15804 10.2322 4.43934L11.7929 6H20.5C21.3284 6 22 6.67157 22 7.5V18.5C22 19.3284 21.3284 20 20.5 20H3.5C2.67157 20 2 19.3284 2 18.5V5.5Z"
+                    fill="#90A4AE"
+                  />
+                  <path
+                    d="M2 7.5C2 6.67157 2.67157 6 3.5 6H20.5C21.3284 6 22 6.67157 22 7.5V18.5C22 19.3284 21.3284 20 20.5 20H3.5C2.67157 20 2 19.3284 2 18.5V7.5Z"
+                    fill="#B0BEC5"
+                  />
+                </svg>
               src
-            </label>
-            <div className="tree-children-wrapper">
-              <ul className="tree-children">
-                <li className="tree-item">
-                  <input type="checkbox" id="folder-app" className="tree-toggle" defaultChecked />
-                  <label htmlFor="folder-app" className="tree-label">
-                    <svg className="icon folder-closed-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 2H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z" />
-                    </svg>
-                    <svg className="icon folder-open-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 2H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z" />
-                      <path d="M2 10h20" />
-                    </svg>
-                    app
-                  </label>
-                  <div className="tree-children-wrapper">
-                    <ul className="tree-children">
-                      <li className="tree-item">
-                        <div className="file-item">
-                          <svg className="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
-                            <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
-                            <polyline points="14 2 14 8 20 8" />
-                          </svg>
-                          layout.tsx
-                        </div>
+              </summary>
+
+            <ul>
+              <li>
+                <details open>
+                  <summary>
+                    <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width={"13px"}
+                  height={"13px"}
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M2 5.5C2 4.67157 2.67157 4 3.5 4H9.17157C9.5694 4 9.95093 4.15804 10.2322 4.43934L11.7929 6H20.5C21.3284 6 22 6.67157 22 7.5V18.5C22 19.3284 21.3284 20 20.5 20H3.5C2.67157 20 2 19.3284 2 18.5V5.5Z"
+                    fill="#90A4AE"
+                  />
+                  <path
+                    d="M2 7.5C2 6.67157 2.67157 6 3.5 6H20.5C21.3284 6 22 6.67157 22 7.5V18.5C22 19.3284 21.3284 20 20.5 20H3.5C2.67157 20 2 19.3284 2 18.5V7.5Z"
+                    fill="#B0BEC5"
+                  />
+                </svg>
+                    pages</summary>
+
+                  <ul>
+                    <li>
+                      <NavLink to="/" className={({ isActive }) =>
+                          isActive ? 'nav-link active' : 'nav-link'
+                      }>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="-11.5 -10.23174 23 20.46348"
+                        width={"13px"}
+                        height={"13px"}
+                      >
+                        <circle cx="0" cy="0" r="2.05" fill="#61DAFB" />
+                        <g stroke="#61DAFB" strokeWidth="1" fill="none">
+                          <ellipse rx="11" ry="4.2" />
+                          <ellipse rx="11" ry="4.2" transform="rotate(60)" />
+                          <ellipse rx="11" ry="4.2" transform="rotate(120)" />
+                        </g>
+                      </svg>
+                      SobreMim.jsx
+                      </NavLink>
                       </li>
-                      <li className="tree-item">
-                        <div className="file-item">
-                          <svg className="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
-                            <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
-                            <polyline points="14 2 14 8 20 8" />
-                          </svg>
-                          page.tsx
-                        </div>
+                    <li>
+                      <NavLink to="/habilidades" className={({ isActive }) =>
+                          isActive ? 'nav-link active' : 'nav-link'
+                      }>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="-11.5 -10.23174 23 20.46348"
+                        width={"13px"}
+                        height={"13px"}
+                      >
+                        <circle cx="0" cy="0" r="2.05" fill="#61DAFB" />
+                        <g stroke="#61DAFB" strokeWidth="1" fill="none">
+                          <ellipse rx="11" ry="4.2" />
+                          <ellipse rx="11" ry="4.2" transform="rotate(60)" />
+                          <ellipse rx="11" ry="4.2" transform="rotate(120)" />
+                        </g>
+                      </svg>
+                      Projetos.jsx
+                      </NavLink>
                       </li>
-                    </ul>
-                  </div>
-                </li>
-                <li className="tree-item">
-                  <input type="checkbox" id="folder-components" className="tree-toggle" defaultChecked />
-                  <label htmlFor="folder-components" className="tree-label">
-                    <svg className="icon folder-closed-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 2H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z" />
-                    </svg>
-                    <svg className="icon folder-open-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 2H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z" />
-                      <path d="M2 10h20" />
-                    </svg>
-                    components
-                  </label>
-                  <div className="tree-children-wrapper">
-                    <ul className="tree-children">
-                      <li className="tree-item">
-                        <input type="checkbox" id="folder-ui" className="tree-toggle" defaultChecked />
-                        <label htmlFor="folder-ui" className="tree-label">
-                          <svg className="icon folder-closed-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
-                            <path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 2H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z" />
-                          </svg>
-                          <svg className="icon folder-open-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
-                            <path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 2H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z" />
-                            <path d="M2 10h20" />
-                          </svg>
-                          ui
-                        </label>
-                        <div className="tree-children-wrapper">
-                          <ul className="tree-children">
-                            <li className="tree-item">
-                              <div className="file-item is-selected">
-                                <svg className="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
-                                  <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
-                                  <polyline points="14 2 14 8 20 8" />
-                                </svg>
-                                button.tsx
-                              </div>
-                            </li>
-                          </ul>
-                        </div>
+                    <li>
+                      <NavLink to="/contatos" className={({ isActive }) =>
+                          isActive ? 'nav-link active' : 'nav-link'
+                        }>
+                    <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="-11.5 -10.23174 23 20.46348"
+                        width={"13px"}
+                        height={"13px"}
+                      >
+                        <circle cx="0" cy="0" r="2.05" fill="#61DAFB" />
+                        <g stroke="#61DAFB" strokeWidth="1" fill="none">
+                          <ellipse rx="11" ry="4.2" />
+                          <ellipse rx="11" ry="4.2" transform="rotate(60)" />
+                          <ellipse rx="11" ry="4.2" transform="rotate(120)" />
+                        </g>
+                      </svg>
+                      Contatos.jsx
+                      </NavLink>
                       </li>
-                      <li className="tree-item">
-                        <div className="file-item">
-                          <svg className="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
-                            <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
-                            <polyline points="14 2 14 8 20 8" />
-                          </svg>
-                          header.tsx
-                        </div>
-                      </li>
-                      <li className="tree-item">
-                        <div className="file-item">
-                          <svg className="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
-                            <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
-                            <polyline points="14 2 14 8 20 8" />
-                          </svg>
-                          footer.tsx
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-                <li className="tree-item">
-                  <input type="checkbox" id="folder-lib" className="tree-toggle" defaultChecked />
-                  <label htmlFor="folder-lib" className="tree-label">
-                    <svg className="icon folder-closed-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 2H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z" />
-                    </svg>
-                    <svg className="icon folder-open-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 2H4a2 2 0 0 0-2 2v13c0 1.1.9 2 2 2Z" />
-                      <path d="M2 10h20" />
-                    </svg>
-                    lib
-                  </label>
-                  <div className="tree-children-wrapper">
-                    <ul className="tree-children">
-                      <li className="tree-item">
-                        <div className="file-item">
-                          <svg className="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
-                            <path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" />
-                            <polyline points="14 2 14 8 20 8" />
-                          </svg>
-                          utils.ts
-                        </div>
-                      </li>
-                    </ul>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </div>
+                  </ul>
+                </details>
+              </li>
+
+              <li>README.md</li>
+            </ul>
+          </details>
+        </li>
+      </ul>
+    </div>
   );
 }
 
 
-export default SideBarNew;
+export default FileExplorer;

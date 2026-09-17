@@ -1,21 +1,26 @@
 .file-tree {
   font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  background: #1e293b;
-  color: #e2e8f0;
-  padding: 20px;
-  border-radius: 12px;
+  background: var(--bg);
+  color: var(--text);
+  padding: 10px;
   max-width: 300px;
 }
 ul {
   list-style: none;
-  padding-left: 20px;
+  padding-left: 10px;
 }
 .file-tree > ul {
   padding-left: 0;
   margin: 0;
 }
-li {
+.file-tree ul li {
   margin: 5px 0;
+}
+
+.file-tree ul li a {
+  text-decoration: none;
+  color: var(--text);
+  background-color: transparent;
 }
 summary {
   cursor: pointer;
@@ -31,7 +36,7 @@ summary::-webkit-details-marker {
   display: none;
 }
 summary:hover {
-  background: #334155;
+  background-color: rgba(44, 49, 58, 0.535);
 }
 summary::before {
   content: "\25B6";
@@ -53,7 +58,6 @@ details[open] > summary::before {
   padding-bottom: 4px;
 }
 .file-tree li:not(:has(details)):hover {
-  color: #fff;
   background: rgba(255,255,255,0.05);
   border-radius: 4px;
 }

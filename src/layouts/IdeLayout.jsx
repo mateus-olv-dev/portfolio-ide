@@ -1,12 +1,12 @@
 import '../components/Editor/EditorScreen'
 import { EditorScreen } from '../components/Editor/EditorScreen'
-// import { SideBar } from '../components/SidebarNav/SideBar'
-import { SideBarNew } from '../components/SidebarNav/SideBarNew'
+import { SideBar } from '../components/SidebarNav/SideBar'
+// import { SideBarNew } from '../components/SidebarNav/SideBarNew'
 
 export function IdeLayout() {
   return(
     <main>
-      <SideBarNew />
+      <SideBar />
       <EditorScreen />
     </main>
   )
