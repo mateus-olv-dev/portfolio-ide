@@ -3,7 +3,7 @@
   width: auto;
   position: absolute;
   left: 0px;
-  top: 20px;
+  top: 30px;
 }
 .external-side-bar ul {
   display: flex;
@@ -12,6 +12,7 @@
 }
 .external-side-bar ul li {
   padding: 5px 10px;
+ 
 }
 
 .external-side-bar ul li:first-child {
@@ -28,4 +29,33 @@
   opacity: 1;
   cursor: pointer;
   transform: scale(1.05);
+}
+
+
+
+.container-top-bar {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-bar-menu ul, .top-bar-nav ul  {
+  display: flex;
+  gap: 10px;
+}
+
+
+.top-bar-menu ul li, .top-bar-nav ul li {
+  color: var(--text);
+  font-size: 12px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.top-bar-menu ul li:hover, .top-bar-nav ul li:hover {
+  opacity: 1;
 }

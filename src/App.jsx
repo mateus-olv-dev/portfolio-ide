@@ -8,6 +8,7 @@ export default function App() {
 
   return (
     <body>
+      <TopBar />
       <ExternalSideBar />
       <IdeLayout />
     </body>
@@ -34,5 +35,35 @@ function ExternalSideBar() {
   </div>
   )
   
-  
+}
+
+function TopBar() {
+  return (
+    <div className="container-top-bar">
+
+      <div className="top-bar-menu">
+        <ul>
+          <li>File</li>
+          <li>Edit</li>
+          <li>View</li>
+          <li>Terminal</li>
+        </ul>
+      </div>
+
+      <div className="top-bar-nav">
+        <ul>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#c3c5cb"><path d="M232-444v-72h496v72H232Z"/></svg>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" height="15px" viewBox="0 -960 960 960" width="15px" fill="#c3c5cb"><path d="M216-144q-29.7 0-50.85-21.15Q144-186.3 144-216v-528q0-29.7 21.15-50.85Q186.3-816 216-816h528q29.7 0 50.85 21.15Q816-773.7 816-744v528q0 29.7-21.15 50.85Q773.7-144 744-144H216Zm0-72h528v-528H216v528Z"/></svg>
+          </li>
+          <li>
+            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px" fill="#c3c5cb"><path d="m291-240-51-51 189-189-189-189 51-51 189 189 189-189 51 51-189 189 189 189-51 51-189-189-189 189Z"/></svg>
+          </li>
+        </ul>
+      </div>
+      
+    </div>
+  )
 }

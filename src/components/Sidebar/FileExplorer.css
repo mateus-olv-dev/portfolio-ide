@@ -15,12 +15,16 @@ ul {
 }
 .file-tree ul li {
   margin: 5px 0;
+  
 }
 
 .file-tree ul li a {
   text-decoration: none;
   color: var(--text);
   background-color: transparent;
+  display: flex;
+  gap: 5px;
+  align-items: center;
 }
 summary {
   cursor: pointer;
@@ -39,11 +43,10 @@ summary:hover {
   background-color: rgba(44, 49, 58, 0.535);
 }
 summary::before {
-  content: "\25B6";
-  font-size: 0.6rem;
+  content: url("../../assets/arrow.svg"); 
+  width: 13px;
   margin-right: 5px;
   transition: transform 0.2s;
-  color: #94a3b8;
 }
 details[open] > summary::before {
   transform: rotate(90deg);

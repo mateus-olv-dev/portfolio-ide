@@ -1,7 +1,7 @@
 // import { NavLink } from "react-router-dom";
 import './SideBar.css'
 
-import FileExplorer from './SideBarNew.jsx';
+import FileExplorer from './FileExplorer.jsx';
 
 export function SideBar() {
   return (

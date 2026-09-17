@@ -30,24 +30,60 @@ function EditorNav() {
           <NavLink to="/" end  className={({ isActive }) =>
               isActive ? 'nav-link active' : 'nav-link'
             }>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4"/></svg>
-              SobreMim.md
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="-11.5 -10.23174 23 20.46348"
+                width={"13px"}
+                height={"13px"}
+              >
+                <circle cx="0" cy="0" r="2.05" fill="#61DAFB" />
+                <g stroke="#61DAFB" strokeWidth="1" fill="none">
+                  <ellipse rx="11" ry="4.2" />
+                  <ellipse rx="11" ry="4.2" transform="rotate(60)" />
+                  <ellipse rx="11" ry="4.2" transform="rotate(120)" />
+                </g>
+              </svg>
+              SobreMim.jsx
           </NavLink >
         </li>
         <li>
           <NavLink to="/habilidades"  className={({ isActive }) =>
               isActive ? 'nav-link active' : 'nav-link'
             }>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4"/></svg>
-              Habilidades.json
+              <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="-11.5 -10.23174 23 20.46348"
+                        width={"13px"}
+                        height={"13px"}
+                      >
+                        <circle cx="0" cy="0" r="2.05" fill="#61DAFB" />
+                        <g stroke="#61DAFB" strokeWidth="1" fill="none">
+                          <ellipse rx="11" ry="4.2" />
+                          <ellipse rx="11" ry="4.2" transform="rotate(60)" />
+                          <ellipse rx="11" ry="4.2" transform="rotate(120)" />
+                        </g>
+              </svg>
+              Projetos.jsx
           </NavLink>
         </li>
         <li>
           <NavLink to="/contatos"  className={({ isActive }) =>
               isActive ? 'nav-link active' : 'nav-link'
             }>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 3h7l4 4v14H7z"/><path d="M14 3v4h4"/></svg>
-              Contatos.md
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="-11.5 -10.23174 23 20.46348"
+                width={"13px"}
+                height={"13px"}
+              >
+                <circle cx="0" cy="0" r="2.05" fill="#61DAFB" />
+                <g stroke="#61DAFB" strokeWidth="1" fill="none">
+                  <ellipse rx="11" ry="4.2" />
+                  <ellipse rx="11" ry="4.2" transform="rotate(60)" />
+                  <ellipse rx="11" ry="4.2" transform="rotate(120)" />
+                </g>
+              </svg>
+              Contatos.jsx
           </NavLink>
         </li>
       </ul>
