@@ -74,7 +74,7 @@ function StatusBar() {
     <div className="container-status-bar">
       <ul className='list-1'>
         <li>⎇ main</li>
-        <li>● portfolio-web</li>
+        <li><span>● </span>portfolio-ide</li>
         <li>React</li>
       </ul>
       <ul className='list-2'>
