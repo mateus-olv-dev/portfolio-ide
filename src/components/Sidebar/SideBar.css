@@ -2,8 +2,10 @@
   margin-left: 30px;
   background-color: var(--bg);
   width: 15%;
-  height: 90%;
+  height: 87%;
   border-radius: 10px;
+  margin-top: 20px;
+
 }
 .top-title {
   display: flex;

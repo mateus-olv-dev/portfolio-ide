@@ -11,6 +11,7 @@ export default function App() {
       <TopBar />
       <ExternalSideBar />
       <IdeLayout />
+      <StatusBar />
     </body>
   )
 }
@@ -64,6 +65,23 @@ function TopBar() {
         </ul>
       </div>
       
+    </div>
+  )
+}
+
+function StatusBar() {
+  return (
+    <div className="container-status-bar">
+      <ul className='list-1'>
+        <li>⎇ main</li>
+        <li>● portfolio-web</li>
+        <li>React</li>
+      </ul>
+      <ul className='list-2'>
+        <li>disponivel para oportunidades</li>
+        <li>github</li>
+        <li>linkedin</li>
+      </ul>
     </div>
   )
 }

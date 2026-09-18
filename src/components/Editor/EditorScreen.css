@@ -1,6 +1,7 @@
 .editor-screen {
   width: 77%;
-  height: 90%;
+  height: 87%;
+  margin-top: 20px;
   border-radius: 10px;
   background-color: var(--bg);
   box-sizing: border-box;
@@ -31,7 +32,7 @@
   width: 100%;
   display: flex;
   align-items: center;
-  gap: 5cpx;
+  gap: 5px;
 }
 .editor-nav ul li a:hover {
   opacity: 1;

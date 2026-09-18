@@ -114,8 +114,6 @@ export function FileExplorer () {
                   </ul>
                 </details>
               </li>
-
-              <li>README.md</li>
             </ul>
           </details>
         </li>

@@ -8,7 +8,7 @@ import Contatos from '../pages/Contatos'
 
 export function EditorScreen() {
   return(
-    <section className="editor-screen sobre-mim">
+    <section className="editor-screen">
       <EditorNav />
         <Routes>
           <Route path='/' element={<Home />}/>
