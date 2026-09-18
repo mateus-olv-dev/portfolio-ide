@@ -27,7 +27,7 @@ function ExternalSideBar() {
       </li>
       
       <li> 
-        <a href="http://" target="_blank" rel="noopener noreferrer">
+        <a href="https://github.com/mateus-olv-dev" target="_blank" rel="noopener noreferrer">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.5 2h-13A3.5 3.5 0 0 0 2 5.5v13A3.5 3.5 0 0 0 5.5 22h13a3.5 3.5 0 0 0 3.5-3.5v-13A3.5 3.5 0 0 0 18.5 2ZM8.3 18.4H5.7V9.9h2.6v8.5ZM7 8.8a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3Zm11.4 9.6h-2.6v-4.4c0-1.1 0-2.5-1.5-2.5s-1.7 1.2-1.7 2.4v4.5h-2.6V9.9h2.5v1.1h.1c.4-.7 1.3-1.5 2.6-1.5 2.7 0 3.2 1.8 3.2 4.2v4.7Z"/>
           </svg>
         </a>
