@@ -4,6 +4,7 @@ export default function Contatos () {
   return (
     <section className="editor-screen">
       <div className="container-contatos">
+        <h2>Disponivel para oportunidades</h2>
         <h1>Vamos conversar</h1>
         <p>Estou aberto a oportunidades de estágio e projetos em equipe. O jeito mais rápido de falar comigo é por e-mail</p>
         <div className="container-social">

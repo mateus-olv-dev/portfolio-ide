@@ -39,12 +39,21 @@ opacity: 1;
 font-weight: bold;
 }
 
-.nav-link.active {
-background-color: rgba(44, 49, 58, 0.535);
+.editor-nav .nav-link {
+  opacity: 0.8;
+  transition: background-color 0.2s ease, opacity 0.2s ease;
 }
 
-.editor-nav ul li svg {
-width: 13px;
+.editor-nav .nav-link:hover {
+  opacity: 1;
+  background-color: rgba(44, 49, 58, 0.535); 
+}
+
+.editor-nav .nav-link.active {
+  opacity: 1;
+  color: var(--active-text);
+  background-color: var(--active-bg);
+  font-weight: 600;
 }
 
 
