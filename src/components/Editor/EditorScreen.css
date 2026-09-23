@@ -1,38 +1,38 @@
 .editor-screen {
   width: 77%;
-height: 87%;
-margin-top: 20px;
-border-radius: 10px;
-background-color: var(--bg);
-box-sizing: border-box;
-padding: 10px;
-display: flex;
-flex-direction: column;
-gap: 10px;
+  height: 87%;
+  margin-top: 20px;
+  border-radius: 10px;
+  background-color: var(--bg);
+  box-sizing: border-box;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 .editor-nav {
-width: 100%;
-border-bottom: var(--body)1px solid;
+  width: 100%;
+  border-bottom: var(--body)1px solid;
 }
 .editor-nav ul {
-display: flex;
-list-style: none;
-gap: 40px;
-padding: 5px 0px 5px 0px;
-margin-left: 10px;
+  display: flex;
+  list-style: none;
+  gap: 40px;
+  padding: 5px 0px 5px 0px;
+  margin-left: 10px;
 }
 .editor-nav ul li a {
-font-size: 14px;
-color: var(--text);
-text-decoration: none;
-padding: 5px;
-border-radius: 5px;
-transition: 0.3s;
-opacity: 0.8;
-width: 100%;
-display: flex;
-align-items: center;
-gap: 5px;
+  font-size: 14px;
+  color: var(--text);
+  text-decoration: none;
+  padding: 5px;
+  border-radius: 5px;
+  transition: 0.3s;
+  opacity: 0.8;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
 .editor-nav ul li a:hover {
 opacity: 1;
@@ -60,6 +60,7 @@ font-weight: bold;
 @media (max-width: 1024px) {
   .editor-screen {
     width: 90%;
+    overflow-y: auto;
   }
 }
 
