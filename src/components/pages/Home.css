@@ -1,6 +1,15 @@
 .home {
-  padding: 40px;
+  padding: clamp(24px, 3vw, 56px);
+  display: grid;
+  grid-template-columns: 1fr minmax(220px, 340px);
+  align-items: center;
+  gap: clamp(28px, 4vw, 56px);
+  max-width: 1400px;   
+  margin: 0 auto;
+}
 
+.home-content {
+  min-width: 0; 
 }
 
 .home-span {
@@ -8,94 +17,145 @@
   font-family: var(--mono);
   font-weight: 400;
   opacity: 0.5;
-  font-size: 20px;
-
+  font-size: clamp(1rem, 0.85rem + 0.5vw, 1.25rem);   /* 16px → 20px */
 }
-.nome{
+
+.nome {
   color: var(--text);
-  font-size: 70px;
+  font-size: clamp(2rem, 1rem + 3vw, 4.375rem);   /* 32px → 70px, escala com a tela */
   font-family: var(--sans);
   font-weight: 400;
+  line-height: 1.1;
 }
+
 .sobre-mim h2 {
   font-family: var(--sans);
-  font-size: 30px;
+  font-size: clamp(1.125rem, 0.6rem + 1vw, 1.875rem);   /* 18px → 30px */
   font-weight: 400;
-
-  background: linear-gradient(90deg, #FF3D00, #FF6A2B, #FF8C42, #FFA94D, #FFC971, #FF6A2B, #FF3D00);  background-size: 200% 200%;
+  background: linear-gradient(90deg, #FF3D00, #FF6A2B, #FF8C42, #FFA94D, #FFC971, #FF6A2B, #FF3D00);
+  background-size: 200% 200%;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   animation: gradient-animation 4s ease infinite;
 }
+
 .resume {
   margin-top: 20px;
   color: var(--text);
   font-family: var(--mono);
   font-weight: 400;
-  max-width: 50%;
-  line-height: 25px;
-  font-size: 16px;
+  max-width: 58ch;   /* baseado em caracteres, mais previsível que % dentro do grid */
+  line-height: 1.6;
+  font-size: clamp(0.875rem, 0.8rem + 0.3vw, 1rem);   /* 14px → 16px */
 }
 
 .resume span {
-background: linear-gradient(90deg, #FF8C42, #FFA94D, #FFC971, #FF6A2B);  background-size: 200% 200%;
--webkit-background-clip: text;
-background-clip: text;
-color: transparent;
-animation: gradient-animation 4s ease infinite;
+  background: linear-gradient(90deg, #FF8C42, #FFA94D, #FFC971, #FF6A2B);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradient-animation 4s ease infinite;
 }
 
-/* ===== Responsividade ===== */
+/* ---------- Foto ---------- */
 
-/* Tablets */
+.foto-wrap {
+  position: relative;
+  justify-self: end;
+  width: 100%;
+  max-width: clamp(200px, 20vw, 340px);   /* menor em notebook, maior em monitor grande */
+}
+
+/* bloco de cor deslocado atrás da foto, reaproveitado do portfólio anterior */
+.foto-wrap::before {
+  content: "";
+  position: absolute;
+  top: -18px;
+  right: -18px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #FF3D00, #FF8C42);
+  animation: gradient-animation 4s ease infinite;
+  border-radius: 4px;
+  z-index: 0;
+}
+
+.foto {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #10141c; /* aparece enquanto a imagem carrega */
+}
+
+.foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;   /* nunca mais distorce, corta mantendo a proporção */
+  filter: grayscale(1) contrast(1.05);
+  display: block;
+}
+
+.foto-tag {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  z-index: 2;
+  background: rgba(10, 10, 10, 0.75);
+  color: var(--text);
+  font-family: var(--mono);
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 3px;
+  letter-spacing: 0.02em;
+}
+
+/* ---------- Responsivo ---------- */
+
 @media (max-width: 1024px) {
+  .home {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .foto-wrap {
+    order: -1;              /* foto aparece antes do texto em telas menores */
+    justify-self: center;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
   .resume {
-    max-width: 70%;
+    max-width: 70ch;
   }
 }
 
 @media (max-width: 768px) {
-  .home {
-    padding: 24px;
-  }
-
-  .nome {
-    font-size: 44px;
-  }
-
-  .sobre-mim h2 {
-    font-size: 22px;
-  }
-
+  /* font-size de .nome, h2 e .resume já escalam sozinhos via clamp() —
+     aqui só ajustamos o que é estrutural, não tipografia */
   .resume {
     max-width: 100%;
-    font-size: 15px;
-    line-height: 22px;
+  }
+
+  .foto-wrap {
+    max-width: 220px;
   }
 }
 
-/* Celulares */
 @media (max-width: 480px) {
-  .home {
-    padding: 16px;
-  }
-
-  .home-span {
-    font-size: 16px;
-  }
-
-  .nome {
-    font-size: 32px;
-  }
-
-  .sobre-mim h2 {
-    font-size: 18px;
-  }
-
   .resume {
-    font-size: 14px;
-    line-height: 20px;
     margin-top: 14px;
+  }
+
+  .foto-wrap {
+    max-width: 180px;
+  }
+
+  .foto-tag {
+    font-size: 10px;
   }
 }
