@@ -1,16 +1,41 @@
-# React + Vite
+# Mateus Oliveira — Portfólio (IDE)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfólio pessoal desenvolvido em React, com uma proposta visual diferente do modelo tradicional: a página inteira é construída como se fosse um editor de código real, no estilo IDE.
 
-Currently, two official plugins are available:
+🔗 [mateus-oliveira-portfolio.vercel.app](https://mateus-oliveira-portfolio.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Sobre o projeto
 
-## React Compiler
+A ideia central foi tratar a navegação do site como a navegação de uma IDE, em vez de usar um menu convencional:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- A **barra lateral** funciona como o explorador de arquivos, listando as seções do site (`SobreMim.jsx`, `Projetos.jsx`, `Contatos.jsx`) como se fossem arquivos reais de um projeto.
+- As **abas** no topo representam as páginas abertas, trocando de conteúdo ao clicar.
+- A **barra de status**, no rodapé, reaproveita elementos comuns de um editor (branch, linguagem) para também exibir links de contato e disponibilidade para oportunidades.
+- O bloco "Sobre mim" é apresentado como um arquivo de código sendo lido, reforçando a identidade de desenvolvedor logo na primeira impressão.
 
-## Expanding the ESLint configuration
+A proposta não foi só estética: a intenção foi que qualquer recrutador ou desenvolvedor que abra o site reconheça imediatamente a referência visual e entenda, sem precisar de texto explicativo, que está diante do trabalho de alguém que lida com código no dia a dia.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Tecnologias utilizadas
+
+- **React** — componentização das páginas e navegação entre seções
+- **CSS** — estilização, responsividade e animações (sem frameworks de UI)
+- **Vite** — ambiente de build e desenvolvimento
+
+## Responsividade
+
+O ajuste de responsividade do layout (adaptação de textos, espaçamentos e da foto de perfil para diferentes tamanhos de tela, de celular a monitores grandes) foi desenvolvido com apoio de IA (Claude, da Anthropic), incluindo o uso de `clamp()` para escala fluida de tipografia em vez de breakpoints fixos.
+
+## Rodando localmente
+
+```bash
+git clone https://github.com/mateus-olv-dev/portfolio-ide.git
+cd portfolio-ide
+npm install
+npm run dev
+```
+
+## Contato
+
+- E-mail: mateusolv.dev@gmail.com
+- GitHub: [github.com/mateus-olv-dev](https://github.com/mateus-olv-dev)
+- LinkedIn: _(adicionar link)_

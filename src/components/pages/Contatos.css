@@ -87,9 +87,6 @@
   padding: 5px;
 }
 
-/* ===== Responsividade ===== */
-
-/* Tablets */
 @media (max-width: 768px) {
     .container-contatos {
       padding: 0px 20px;
@@ -108,7 +105,6 @@
   }
 }
 
-/* Celulares */
 @media (max-width: 480px) {
   .container-contatos {
     padding: 0px 16px;
