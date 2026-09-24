@@ -12,6 +12,7 @@ const projetos = [
     image: cocktailsImg,
     tags: ["JavaScript", "HTML", "CSS", "API"],
     repoUrl: "https://github.com/mateus-olv-dev/website-cocktails",
+    liveUrl: "https://website-cocktails.vercel.app"
   },
   {
     id: "memoteca",

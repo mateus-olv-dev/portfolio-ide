@@ -73,6 +73,7 @@ font-weight: bold;
     gap: 20px;
     overflow-x: auto;
   }
+  
 }
 
 @media (max-width: 480px) {

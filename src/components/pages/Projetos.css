@@ -17,6 +17,8 @@
   font-size: 40px;
   color: var(--text);
   margin-left: 20px;
+  animation: slide-top-blur 0.5s normal;
+
 }
 
 .container-projetos {
@@ -28,6 +30,8 @@
   padding: 20px;
   box-sizing: border-box;
   overflow-y: auto;
+  animation: slide-top-blur 0.5s normal;
+
 }
 
 ::-webkit-scrollbar { width: 2px; opacity: 0.5; }
@@ -61,6 +65,7 @@
   border-radius: 8px;
 
   transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+
 }
 
 .project-card:hover {

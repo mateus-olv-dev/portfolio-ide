@@ -9,7 +9,10 @@
 }
 
 .home-content {
-  min-width: 0; 
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  animation: slide-top-blur 0.5s normal;
 }
 
 .home-span {
@@ -59,16 +62,16 @@
   animation: gradient-animation 4s ease infinite;
 }
 
-/* ---------- Foto ---------- */
 
 .foto-wrap {
   position: relative;
   justify-self: end;
   width: 100%;
-  max-width: clamp(200px, 20vw, 340px);   /* menor em notebook, maior em monitor grande */
+  max-width: clamp(200px, 20vw, 340px);
+  animation: slide-top-blur 0.5s normal;
+
 }
 
-/* bloco de cor deslocado atrás da foto, reaproveitado do portfólio anterior */
 .foto-wrap::before {
   content: "";
   position: absolute;
@@ -89,13 +92,14 @@
   aspect-ratio: 3 / 4;
   overflow: hidden;
   border-radius: 4px;
-  background: #10141c; /* aparece enquanto a imagem carrega */
+  background: #10141c; 
+  animation: slide-top-blur 0.5s normal;
 }
 
 .foto img {
   width: 100%;
   height: 100%;
-  object-fit: cover;   /* nunca mais distorce, corta mantendo a proporção */
+  object-fit: cover;   
   filter: grayscale(1) contrast(1.05);
   display: block;
 }
@@ -114,16 +118,15 @@
   letter-spacing: 0.02em;
 }
 
-/* ---------- Responsivo ---------- */
 
 @media (max-width: 1024px) {
   .home {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 30px;
   }
 
   .foto-wrap {
-    order: -1;              /* foto aparece antes do texto em telas menores */
+    order: -1;            
     justify-self: center;
     max-width: 280px;
     margin: 0 auto;
@@ -135,14 +138,15 @@
 }
 
 @media (max-width: 768px) {
-  /* font-size de .nome, h2 e .resume já escalam sozinhos via clamp() —
-     aqui só ajustamos o que é estrutural, não tipografia */
   .resume {
     max-width: 100%;
   }
 
   .foto-wrap {
     max-width: 220px;
+  }
+  .home-content {
+    gap: 20px;
   }
 }
 

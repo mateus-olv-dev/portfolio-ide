@@ -2,6 +2,8 @@
   padding: 0px 0px 0px 30px;
   width: 100%;
   height: 100%;
+  animation: slide-top-blur 0.5s normal;
+
 }
 .container-contatos h2 {
    display: inline-flex;

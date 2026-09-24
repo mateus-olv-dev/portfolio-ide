@@ -47,4 +47,22 @@ main {
 }
   
       
+@keyframes slide-top-blur {
+
+  0% {
+    -webkit-transform: translateY(200px) ;
+            transform: translateY(200px);
+            
+     -webkit-filter: blur(12px);
+            filter: blur(12px);
+  }
     
+          
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+
+    -webkit-filter: blur(0px);
+            filter: blur(0px)
+  }
+}  
